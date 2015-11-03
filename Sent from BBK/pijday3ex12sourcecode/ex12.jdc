@@ -1,0 +1,36 @@
+println ("Enter x co-ordinate for point 1: ");
+double xco = readDouble();
+println ("Enter y co-ordinate for point 1: ");
+double yco = readDouble();
+Point pt1 = new Point();
+pt1.x = xco;
+pt1.y = yco;
+double dist1 = Math.sqrt((xco*xco) + (yco*yco));
+println ("Point 1 distance = " + dist1);
+println ("Enter x co-ordinate for point 2: ");
+xco = readDouble();
+println ("Enter y co-ordinate for point 2: ");
+yco = readDouble();
+Point pt2 = new Point();
+pt2.x = xco;
+pt2.y = yco;
+double dist2 = Math.sqrt((xco*xco) + (yco*yco));
+println ("Point 2 distance = " + dist2);
+println ("Enter x co-ordinate for point 3: ");
+xco = readDouble();
+println ("Enter y co-ordinate for point 3: ");
+yco = readDouble();
+Point pt3 = new Point();
+pt3.x = xco;
+pt3.y = yco;
+double dist3 = Math.sqrt((xco*xco) + (yco*yco));
+println ("Point 3 distance = " + dist3);
+if (dist1 < dist2) {
+  if (dist1 < dist3) {
+    println ("dist1");
+      
+
+class Point {
+  double x;
+  double y;
+}
