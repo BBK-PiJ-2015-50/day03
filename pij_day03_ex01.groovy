@@ -1,3 +1,4 @@
+// Updated switch block to use charAt for operation selection
 println ""
 println "CALCULATOR PROGRAM"
 double num1, num2
@@ -9,19 +10,19 @@ while (!nomore) {
   println "enter 2nd number"
   num2 = Double.parseDouble(System.console().readLine())
   println "Choose a mathematical operation..."
-  println "ADDITION (1), SUBTRACTION (2), MULTIPLICATION (3) or DIVISION (4)"
-  calc = Integer.parseInt(System.console().readLine())
+  println "ADDITION (A), SUBTRACTION (S), MULTIPLICATION (M) or DIVISION (D)"
+  calc = (System.console().readLine()).charAt(0)
   switch (calc) {
-    case 1:
+    case "A":
       println num1 + " + " + num2 + " = " + (num1 + num2)
       break
-    case 2:
+    case "S":
       println num1 + " - " + num2 + " = " + (num1 - num2)
       break
-    case 3:
+    case "M":
       println num1 + " * " + num2 + " = " + (num1 * num2)
       break
-    case 4:
+    case "D":
       println num1 + " / " + num2 + " = " + (num1 / num2)
       break
     default:
