@@ -2,27 +2,29 @@
 println ""
 println "CALCULATOR PROGRAM"
 double num1, num2
-boolean nomore = false
-while (!nomore) {
+enum MathematicalOperation {ADDITION, SUBTRACTION, MULTIPLICATION, DIVISION}
+MathematicalOperation calc
+//boolean nomore = false
+while (true) {
   println ""
   println "Enter 1st number"
   num1 = Double.parseDouble(System.console().readLine())
   println "enter 2nd number"
   num2 = Double.parseDouble(System.console().readLine())
   println "Choose a mathematical operation..."
-  println "ADDITION (A), SUBTRACTION (S), MULTIPLICATION (M) or DIVISION (D)"
-  calc = (System.console().readLine()).charAt(0)
+  println "ADDITION, SUBTRACTION, MULTIPLICATION or DIVISION"
+  calc = MathematicalOperation.valueOf(System.console().readLine().toUpperCase())
   switch (calc) {
-    case "A":
+    case MathematicalOperation.ADDITION:
       println num1 + " + " + num2 + " = " + (num1 + num2)
       break
-    case "S":
+    case MathematicalOperation.SUBTRACTION:
       println num1 + " - " + num2 + " = " + (num1 - num2)
       break
-    case "M":
+    case MathematicalOperation.MULTIPLICATION:
       println num1 + " * " + num2 + " = " + (num1 * num2)
       break
-    case "D":
+    case MathematicalOperation.DIVISION:
       println num1 + " / " + num2 + " = " + (num1 / num2)
       break
     default:
