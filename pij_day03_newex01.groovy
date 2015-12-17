@@ -1,3 +1,5 @@
+import java.util.Scanner
+
 double d1 = 1.255
 double d2 = d1 + 7 - 4 - 3
 println("d1 = " + d1)

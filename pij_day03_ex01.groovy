@@ -1,18 +1,22 @@
+import java.util.Scanner
+
 // Updated switch block to use enum for operation selection
+// Updated user input with Scanner
 println ""
-println "CALCULATOR PROGRAM"
+println "CALCULATOR PROGRAM...now using Scanner!"
 double num1, num2
 enum MathematicalOperation {ADDITION, SUBTRACTION, MULTIPLICATION, DIVISION}
 MathematicalOperation calc
+Scanner input = new Scanner(System.in)
 while (true) {
   println ""
   println "Enter 1st number"
-  num1 = Double.parseDouble(System.console().readLine())
-  println "enter 2nd number"
-  num2 = Double.parseDouble(System.console().readLine())
+  num1 = input.nextDouble()
+  println "Enter 2nd number"
+  num2 = input.nextDouble()
   println "Choose a mathematical operation..."
   println "ADDITION, SUBTRACTION, MULTIPLICATION or DIVISION"
-  calc = MathematicalOperation.valueOf(System.console().readLine().toUpperCase())
+  calc = MathematicalOperation.valueOf(input.next().toUpperCase())
   switch (calc) {
     case MathematicalOperation.ADDITION:
       println num1 + " + " + num2 + " = " + (num1 + num2)
@@ -31,7 +35,7 @@ while (true) {
       break
   }
   println "Enter 0 to stop or 1 to try more numbers"
-  stop = Integer.parseInt(System.console().readLine())
+  stop = input.nextInt()
   if (stop == 0) {
     break
   }
