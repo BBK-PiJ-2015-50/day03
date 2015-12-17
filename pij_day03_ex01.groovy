@@ -1,10 +1,9 @@
-// Updated switch block to use charAt for operation selection
+// Updated switch block to use enum for operation selection
 println ""
 println "CALCULATOR PROGRAM"
 double num1, num2
 enum MathematicalOperation {ADDITION, SUBTRACTION, MULTIPLICATION, DIVISION}
 MathematicalOperation calc
-//boolean nomore = false
 while (true) {
   println ""
   println "Enter 1st number"
